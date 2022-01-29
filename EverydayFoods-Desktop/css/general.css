@@ -66,10 +66,12 @@ html {
   /* 10px/16px = 0.625 = 62.5% */
   font-size: 62.5%;
   overflow-x: hidden;
+  /* does not work on safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
-  font-family: "rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -113,9 +115,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--5--cols {
+/* .grid--5--cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--center--v {
   align-items: center;
@@ -153,14 +155,13 @@ body {
   color: #cf711f;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
-  letter-spacing: 1.2;
+  letter-spacing: 0.75px;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  background-color: #e67e22;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
@@ -204,7 +205,7 @@ body {
 .btn--form {
   background-color: #45260a;
   color: #fdf2e9;
-  align-self: flex-end;
+  align-self: end;
   padding: 1.2rem;
 }
 
@@ -215,6 +216,7 @@ body {
 
 .link:link,
 .link:visited {
+  display: inline-block;
   color: #e67e22;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
@@ -236,9 +238,11 @@ body {
 }
 
 .list-item {
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
@@ -269,5 +273,5 @@ body {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }

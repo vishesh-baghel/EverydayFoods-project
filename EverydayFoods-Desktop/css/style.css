@@ -63,7 +63,7 @@
   background: none;
   cursor: pointer;
 
-  display: non;
+  display: none;
 }
 
 .icon-mobile-nav {
@@ -74,6 +74,25 @@
 
 .icon-mobile-nav[name="close-outline"] {
   display: none;
+}
+
+/* Sticky navigation */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
 }
 
 /* ***************************** 
@@ -116,7 +135,6 @@
 }
 
 .delivered-imgs img {
-  display: flex;
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
@@ -125,16 +143,13 @@
 }
 
 .delivered-imgs img:last-child {
-  padding-right: 2rem;
+  margin: 0;
 }
 
 .delivered-text {
-  display: flex;
   font-size: 1.8rem;
   font-weight: 600;
-  align-items: center;
-  padding-left: 2rem;
-  gap: 0.7rem;
+  align-self: center;
 }
 
 .delivered-text span {
@@ -158,7 +173,6 @@
   text-align: center;
   margin-bottom: 2.4rem;
   color: #888;
-  margin-top: 2.4rem;
 }
 
 .logos {
@@ -177,11 +191,11 @@
 /******************************* */
 
 .section-how {
-  padding: 8.6rem;
+  padding: 9.6rem 0;
 }
 
 .step-number {
-  font-size: 9.8rem;
+  font-size: 8.6rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
@@ -246,7 +260,7 @@
 
 .meal:hover {
   transform: translateY(-1.2rem);
-  box-shadow: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
@@ -281,7 +295,7 @@
 }
 
 .meal-title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #333;
   font-weight: 600;
   margin-bottom: 3.2rem;
@@ -386,7 +400,6 @@
 
 .pricing-plan {
   border-radius: 11px;
-  padding: 4.8rem;
   width: 75%;
 }
 
@@ -425,7 +438,7 @@
 .plan-name {
   color: #cf711f;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.75;
   margin-bottom: 3.2rem;
@@ -489,7 +502,7 @@
 
 .section-cta {
   /* top/ right / bottom/ left */
-  padding: 9.6rem 0 12.8rem 0;
+  /* padding: 9.6rem 0 12.8rem 0; */
   /* top / horizontal / left */
   padding: 4.8rem 0 12.8rem;
 }
@@ -498,21 +511,22 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: #e67e22;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
-  background-image: linear-gradient(180deg, #eb984e, #e67e22);
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
 }
 
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #2e1907;
+  color: #45260a;
 }
 
 .cta .heading-secondary {
-  color: #2e1907;
+  color: #45260a;
   margin-bottom: 3.2rem;
+  color: inherit;
 }
 
 .cta-text {
@@ -523,9 +537,9 @@
 
 .cta-img-box {
   background-image: linear-gradient(
-      180deg,
+      to right bottom,
       rgba(235, 151, 78, 0.35),
-      rgb(235, 125, 34, 0.35)
+      rgba(230, 125, 34, 0.35)
     ),
     url("../content/img/eating.jpg");
   background-size: cover;
